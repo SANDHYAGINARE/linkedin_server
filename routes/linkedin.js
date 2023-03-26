@@ -14,14 +14,14 @@ router.get(
 router.get("/login/success", (req, res) => {
   if (req.user) {
     // res.json(req.user);
-    return res.send
+    return res.send("login success")
   }
 });
 
 router.get("/logout", (req, res) => {
-  res.logout((error) => {
+  req.logout((error) => {
     if (error) {
-      return;
+      return error;
     }
     res.redirect('/')
   });

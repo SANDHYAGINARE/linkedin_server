@@ -1,5 +1,6 @@
 var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 const passport=require('passport')
+require('dotenv').config()
 
 
 passport.serializeUser((user,done)=>{

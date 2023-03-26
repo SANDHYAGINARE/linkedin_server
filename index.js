@@ -6,6 +6,9 @@ const session=require('express-session');
 const strat=require('./auth/passport-linkedin')
 const app=express()
 
+app.get('/', function(req, res) {
+    res.send("Haii");       
+});
 
 app.use(session({
     secret: "ihsxujghjdxsbxhj",
